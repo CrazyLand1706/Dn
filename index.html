@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>З Днем Народження!</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      background: url('https://images.unsplash.com/photo-1603575448362-f0e21f53f238?fit=crop&w=1350&q=80') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #fff;
+    }
+    .container {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+    }
+    input[type="text"] {
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: none;
+      margin-top: 10px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      background: #ff4081;
+      color: #fff;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    .message {
+      margin-top: 15px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Вітаємо з Днем Народження!</h1>
+    <p>Введіть святковий пароль для сюрпризу:</p>
+    <input type="text" id="userInput" placeholder="Ваш пароль...">
+    <br>
+    <button onclick="checkInput()">Перевірити</button>
+    <div class="message" id="message"></div>
+  </div>
+
+  <script>
+    function checkInput() {
+      const input = document.getElementById('userInput').value.trim().toLowerCase();
+      const message = document.getElementById('message');
+      if (input === 'свято') {
+        message.innerHTML = '🎉 Вітаємо! Ви знайшли секретний сюрприз!';
+      } else {
+        message.innerHTML = '😕 Неправильний пароль. Спробуйте ще раз.';
+      }
+    }
+  </script>
+</body>
+</html>
