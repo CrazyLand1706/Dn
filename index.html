@@ -7,22 +7,23 @@
   <style>
     body {
       margin: 0;
-      padding: 0;
+      padding: 50px 0;
       font-family: sans-serif;
       background: url('https://github.com/CrazyLand1706/Dn/blob/main/photo_2025-06-21_17-41-48.jpg?raw=true') no-repeat center center fixed;
       background-size: cover;
       display: flex;
       justify-content: center;
-      align-items: center;
-      height: 100vh;
+      align-items: flex-start;
+      min-height: 100vh;
       color: #fff;
     }
     .container {
-      background: rgba(0, 0, 0, 0.6);
+      background: rgba(0, 0, 0, 0.7);
       padding: 30px;
       border-radius: 15px;
       text-align: center;
-      max-width: 500px;
+      max-width: 600px;
+      border: 2px solid #fff;
     }
     input[type="text"] {
       padding: 10px;
@@ -46,21 +47,21 @@
       font-size: 18px;
     }
     img {
-      width: 100%;
+      width: 70%;
       border-radius: 10px;
-      margin-bottom: 15px;
+      margin: 15px 0;
     }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>🌞 Завдання 1 — Ранковий старт</h1>
+    <img src="https://github.com/CrazyLand1706/Dn/blob/main/photo_2025-06-21_17-41-48.jpg?raw=true" alt="Святкове фото">
     <p>Привіт, моя неймовірна!<br>
     Ти тільки прокинулась, а цей день уже кращий, бо ти є. Сьогодні твій день — день сюрпризів, емоцій і посмішок. Ти — моє кохане сонечко, тому я знову підготував для тебе невеличкий квест. Цьом!</p>
     <p>Ну що, почнемо гру?</p>
     <p>👉 Загадка:<br>
     Маленькі червоні перлинки на білому троні. Вони ніжні й тануть, як перший поцілунок. Що це?</p>
-    <img src="https://github.com/CrazyLand1706/Dn/blob/main/photo_2025-06-21_17-41-48.jpg?raw=true" alt="Святкове фото">
     <input type="text" id="userInput" placeholder="Ваш відповідь...">
     <br>
     <button onclick="checkInput()">Перевірити</button>
