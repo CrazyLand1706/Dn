@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>З Днем Народження!</title>
+  <title>🌞 Завдання 1 — Ранковий старт</title>
   <style>
     body {
       margin: 0;
       padding: 0;
       font-family: sans-serif;
-      background: url('https://github.com/CrazyLand1706/Dn/blob/main/101.jpg?raw=true') no-repeat center center fixed;
+      background: url('https://github.com/CrazyLand1706/Dn/blob/main/photo_2025-06-21_17-41-48.jpg?raw=true') no-repeat center center fixed;
       background-size: cover;
       display: flex;
       justify-content: center;
@@ -22,6 +22,7 @@
       padding: 30px;
       border-radius: 15px;
       text-align: center;
+      max-width: 500px;
     }
     input[type="text"] {
       padding: 10px;
@@ -44,13 +45,23 @@
       margin-top: 15px;
       font-size: 18px;
     }
+    img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Вітаємо з Днем Народження!</h1>
-    <p>Введіть святковий пароль для сюрпризу:</p>
-    <input type="text" id="userInput" placeholder="Ваш пароль...">
+    <h1>🌞 Завдання 1 — Ранковий старт</h1>
+    <p>Привіт, моя неймовірна!<br>
+    Ти тільки прокинулась, а цей день уже кращий, бо ти є. Сьогодні твій день — день сюрпризів, емоцій і посмішок. Ти — моє кохане сонечко, тому я знову підготував для тебе невеличкий квест. Цьом!</p>
+    <p>Ну що, почнемо гру?</p>
+    <p>👉 Загадка:<br>
+    Маленькі червоні перлинки на білому троні. Вони ніжні й тануть, як перший поцілунок. Що це?</p>
+    <img src="https://github.com/CrazyLand1706/Dn/blob/main/photo_2025-06-21_17-41-48.jpg?raw=true" alt="Святкове фото">
+    <input type="text" id="userInput" placeholder="Ваш відповідь...">
     <br>
     <button onclick="checkInput()">Перевірити</button>
     <div class="message" id="message"></div>
@@ -60,10 +71,10 @@
     function checkInput() {
       const input = document.getElementById('userInput').value.trim().toLowerCase();
       const message = document.getElementById('message');
-      if (input === 'свято') {
-        message.innerHTML = '🎉 Вітаємо! Ви знайшли секретний сюрприз!';
+      if (input === 'ікра' || input === 'канапка') {
+        message.innerHTML = '🌟 Молодець! Так тримати! Час підкріпитися!<br>Смакуй свої канапки з ікоркою — вони зарядять тебе на нові пригоди. І будь готова: далі буде ще цікавіше 😉 Шукай наступну підказу біля канапок.';
       } else {
-        message.innerHTML = '😕 Неправильний пароль. Спробуйте ще раз.';
+        message.innerHTML = '😕 Неправильна відповідь. Спробуй ще раз.';
       }
     }
   </script>
