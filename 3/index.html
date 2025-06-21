@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🌊 Завдання 4 — Спогади про пригоду</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 50px 0;
+      font-family: sans-serif;
+      background: #000;
+      display: block;
+      min-height: 100vh;
+      color: #fff;
+      position: relative;
+    }
+    .background {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://github.com/CrazyLand1706/Dn/blob/main/photo_2025-06-21_18-21-00.jpg?raw=true') no-repeat center center;
+      background-size: cover;
+      filter: blur(6px);
+      z-index: 0;
+    }
+    .container {
+      position: relative;
+      z-index: 1;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+      max-width: 600px;
+      border: 2px solid #fff;
+      margin: 50px auto;
+    }
+    input[type="text"] {
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: none;
+      margin-top: 10px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      background: #ff4081;
+      color: #fff;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    .message {
+      margin-top: 15px;
+      font-size: 18px;
+    }
+    .slideshow {
+      width: 100%;
+      max-width: 500px;
+      height: 300px;
+      margin: 20px auto;
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+    .slideshow img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 10px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+    .slideshow img.top-focus {
+      object-position: top;
+    }
+    .slideshow img.active {
+      opacity: 1;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="background"></div>
+  <div class="container">
+    <h1>🌊 Завдання 4 — Спогади про пригоду</h1>
+    <div class="slideshow">
+      <img src="https://github.com/CrazyLand1706/Dn/blob/main/photo_2025-06-21_18-21-02.jpg?raw=true" class="active" alt="Слайд 1">
+      <img src="https://github.com/CrazyLand1706/Dn/blob/main/photo_2025-06-21_18-21-00.jpg?raw=true" alt="Слайд 2">
+      <img src="https://github.com/CrazyLand1706/Dn/blob/main/photo_2025-06-21_18-20-57.jpg?raw=true" alt="Слайд 3">
+      <img src="https://github.com/CrazyLand1706/Dn/blob/main/photo_2025-06-21_18-20-55.jpg?raw=true" class="top-focus" alt="Слайд 4">
+      <img src="https://github.com/CrazyLand1706/Dn/blob/main/photo_2025-06-21_18-20-52.jpg?raw=true" alt="Слайд 5">
+    </div>
+    <p>Ти вже розігріла цей день своїм танцем, а тепер час згадати ще одну важливу історію. Бо твоя пам'ять — це скарб, у якому живуть наші найкращі моменти.</p>
+    <p>👉 Завдання:<br>
+    Зупинись на хвильку. Згадай три цікаві факти з нашої першої подорожі в Туреччину. Що тоді нас найбільше розсмішило чи здивувало? Що стало тим моментом, який гріє душу досі?</p>
+    <p>А тепер — відповідь на головне запитання:<br>
+    Скільки днів ми тоді провели разом у цій мандрівці?</p>
+    <input type="text" id="userInput" placeholder="Ваша відповідь...">
+    <br>
+    <button onclick="checkInput()">Перевірити</button>
+    <div class="message" id="message"></div>
+  </div>
+
+  <script>
+    const slides = document.querySelectorAll('.slideshow img');
+    let currentSlide = 0;
+    setInterval(() => {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + 1) % slides.length;
+      slides[currentSlide].classList.add('active');
+    }, 5000); // 5 секунд між змінами
+
+    function checkInput() {
+      const input = document.getElementById('userInput').value.trim();
+      const message = document.getElementById('message');
+      if (input === '9') {
+        message.innerHTML = '🌟 Молодець! Рухаємось далі. Новий сюрприз і підказка вже чекають на тебе! Наступна підказка у Дані.';
+      } else {
+        message.innerHTML = '😕 Неправильна відповідь. Спробуй ще раз.';
+      }
+    }
+  </script>
+</body>
+</html>

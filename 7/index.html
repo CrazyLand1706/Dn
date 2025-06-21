@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Завдання 8 — Підказка</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 50px 0;
+      font-family: sans-serif;
+      background: #000;
+      display: block;
+      min-height: 100vh;
+      color: #fff;
+      position: relative;
+    }
+    .background {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://github.com/CrazyLand1706/Dn/blob/main/alexmalysh.ph-41.jpg?raw=true') no-repeat center center;
+      background-size: cover;
+      filter: blur(6px);
+      z-index: 0;
+    }
+    .container {
+      position: relative;
+      z-index: 1;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+      max-width: 600px;
+      border: 2px solid #fff;
+      margin: 50px auto;
+    }
+    input[type="text"] {
+      padding: 12px;
+      font-size: 18px;
+      width: 80%;
+      border-radius: 5px;
+      border: none;
+      margin-top: 10px;
+    }
+    button {
+      padding: 12px 24px;
+      font-size: 18px;
+      border: none;
+      border-radius: 5px;
+      background: #ff4081;
+      color: #fff;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    .message {
+      margin-top: 15px;
+      font-size: 18px;
+    }
+    img {
+      width: 70%;
+      border-radius: 10px;
+      margin: 15px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="background"></div>
+  <div class="container">
+    <h1>Завдання 8 — Підказка</h1>
+    <img src="https://github.com/CrazyLand1706/Dn/blob/main/alexmalysh.ph-41.jpg?raw=true" alt="Підказка">
+    <p>Ти вже зібрала стільки посмішок і сюрпризів сьогодні, що цей день розцвів, як весняний сад. Але є одна річ, якої ти ще не отримала сьогодні — і без неї жодна чарівна історія не буває повною.</p>
+    <p>Це те, що завжди дарують тим, хто заслуговує на захоплення й вдячність. І це те, що точно прикрасить твої фото сьогодні.</p>
+    <p>👉 Загадка:<br>
+    Що це за барвистий символ радості, що говорить без слів і підкреслює, яка ти особлива?</p>
+    
+    <input type="text" id="userInput" placeholder="Введіть пароль...">
+    <br>
+    <button onclick="checkInput()">Перевірити</button>
+    <div class="message" id="message"></div>
+  </div>
+
+  <script>
+    function checkInput() {
+      const input = document.getElementById('userInput').value.trim().toLowerCase();
+      const message = document.getElementById('message');
+      if (input === 'квіти') {
+        message.innerHTML = '🌟 Молодець! Ці квіти сьогодні — для тебе. Ти заслуговуєш на всю цю красу. Готуйся, попереду ще один сюрприз!';
+      } else {
+        message.innerHTML = '😕 Неправильна відповідь. Спробуй ще раз.';
+      }
+    }
+  </script>
+</body>
+</html>

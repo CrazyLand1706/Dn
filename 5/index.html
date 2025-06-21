@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🌟 Завдання 6 — Стіч просить концерт</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 50px 0;
+      font-family: sans-serif;
+      background: #000;
+      display: block;
+      min-height: 100vh;
+      color: #fff;
+      position: relative;
+    }
+    .background {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://github.com/CrazyLand1706/Dn/blob/main/photo_2025-06-21_20-11-35.jpg?raw=true') no-repeat center center;
+      background-size: cover;
+      filter: blur(6px);
+      z-index: 0;
+    }
+    .container {
+      position: relative;
+      z-index: 1;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+      max-width: 600px;
+      border: 2px solid #fff;
+      margin: 50px auto;
+    }
+    input[type="text"] {
+      padding: 12px;
+      font-size: 18px;
+      width: 80%;
+      border-radius: 5px;
+      border: none;
+      margin-top: 10px;
+    }
+    button {
+      padding: 12px 24px;
+      font-size: 18px;
+      border: none;
+      border-radius: 5px;
+      background: #ff4081;
+      color: #fff;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    .message {
+      margin-top: 15px;
+      font-size: 18px;
+    }
+    img {
+      width: 70%;
+      border-radius: 10px;
+      margin: 15px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="background"></div>
+  <div class="container">
+    <h1>🌟 Завдання 6 — Стіч просить концерт</h1>
+    <img src="https://github.com/CrazyLand1706/Dn/blob/main/photo_2025-06-21_20-11-35.jpg?raw=true" alt="Стіч чекає концерту">
+    <p>Ти знайшла Стіча — твого маленького охоронця на лежанці Аліси. Він уже готовий вирушати з тобою у цю пригоду. Але є одна умова: цей бешкетник обожнює музику й сміх, і без веселого виступу не погодиться йти далі.</p>
+    <p>👉 Завдання:<br>
+    Придумай і проспівай веселу чи смішну пісеньку. Це може бути що завгодно: пісня про Стіча, про кицю Алісу, про сьогоднішній день чи навіть про свої улюблені капці — головне, щоб із усмішкою й настрій піднявся!</p>
+    
+    <input type="text" id="userInput" placeholder="Введіть пароль...">
+    <br>
+    <button onclick="checkInput()">Перевірити</button>
+    <div class="message" id="message"></div>
+  </div>
+
+  <script>
+    function checkInput() {
+      const input = document.getElementById('userInput').value.trim().toLowerCase();
+      const message = document.getElementById('message');
+      if (input === 'пісня') {
+        message.innerHTML = '🌟 Молодець! Твої голос і настрій зарядили цей день магією.<br>Наступний сюрприз шукай там, де ховаються таємниці під сходами.';
+      } else {
+        message.innerHTML = '😕 Неправильна відповідь. Спробуй ще раз.';
+      }
+    }
+  </script>
+</body>
+</html>
